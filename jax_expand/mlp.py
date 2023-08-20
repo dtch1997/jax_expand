@@ -1,6 +1,10 @@
 import jax.numpy as jnp
 from jax import random
-from typing import List
+from typing import List, Tuple
+
+Weight = jnp.ndarray
+Bias = jnp.ndarray
+Params = List[Tuple[Weight, Bias]]
 
 
 def init_mlp_params(layer_widths: List[int], keys=None):
